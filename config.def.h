@@ -5,7 +5,7 @@
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
@@ -103,9 +103,13 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = {
+    "MonoLisa:size=10", 
+    "Fira Code Regular Nerd Font Complete Mono:pixelsize=14:antialias=true:autohint=true",
+
+};
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "MonoLisa:size=10";
 
 #define BG_DARK "#282828";
 #define BG "#1d2021";
@@ -128,9 +132,9 @@ static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = PURPLE;
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = BLUE;
-static char selbordercolor[]             = BLUE;
-static char selfloatcolor[]              = BLUE;
+static char selbgcolor[]                 = YELLOW;
+static char selbordercolor[]             = YELLOW;
+static char selfloatcolor[]              = YELLOW;
 
 static char titlenormfgcolor[]           = GRAY;
 static char titlenormbgcolor[]           = "#222222";
