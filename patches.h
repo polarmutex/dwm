@@ -213,7 +213,7 @@
  * variable in config.h to INDICATOR_TOP_BAR to enable this.
  * https://dwm.suckless.org/patches/activetagindicatorbar/
  */
-#define BAR_ACTIVETAGINDICATORBAR_PATCH N / A
+#define BAR_ACTIVETAGINDICATORBAR_PATCH 1
 
 /* Alternative patch to the activetagindicatorbar patch, adds the bar below the
  * tag icon rather than above. Set the tagindicatortype variable in config.h to
