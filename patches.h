@@ -213,7 +213,7 @@
  * variable in config.h to INDICATOR_TOP_BAR to enable this.
  * https://dwm.suckless.org/patches/activetagindicatorbar/
  */
-#define BAR_ACTIVETAGINDICATORBAR_PATCH 1
+#define BAR_ACTIVETAGINDICATORBAR_PATCH N / A
 
 /* Alternative patch to the activetagindicatorbar patch, adds the bar below the
  * tag icon rather than above. Set the tagindicatortype variable in config.h to
@@ -238,7 +238,7 @@
  * contain at least one window.
  * https://dwm.suckless.org/patches/alttagsdecoration/
  */
-#define BAR_ALTTAGSDECORATION_PATCH 0
+#define BAR_ALTTAGSDECORATION_PATCH 1
 
 /* This patch enables dwm to manage external status bars such as lemonbar and
  * polybar. dwm treats the external bar as it would its own, so all regular dwm
@@ -459,7 +459,7 @@
  * than the original ~/.dwm folder.
  * https://dwm.suckless.org/patches/autostart/
  */
-#define AUTOSTART_PATCH 1
+#define AUTOSTART_PATCH 0
 
 /* By default, windows that are not visible when requesting a resize/move will
  * not get resized/moved. With this patch, they will.
@@ -834,7 +834,7 @@
 /* This patch lets you change the position of a client in the stack using the
  * mouse. https://github.com/bakkeby/patches/wiki/placemouse
  */
-#define PLACEMOUSE_PATCH 1
+#define PLACEMOUSE_PATCH 0
 
 /* This patch provides a way to move clients up and down inside the client list.
  * https://dwm.suckless.org/patches/push/

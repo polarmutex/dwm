@@ -35,18 +35,18 @@ static int topbar = 1;      /* 0 means bottom bar */
 /* ------------- colorscheme ------------- */
 #include "colors/gruvbox.h"
 static char normfgcolor[] = GRAY;
-static char normbgcolor[] = "#222222";
-static char normbordercolor[] = "#444444";
+static char normbgcolor[] = BG_DARK;
+static char normbordercolor[] = GRAY;
 static char normfloatcolor[] = PURPLE;
 
-static char selfgcolor[] = "#eeeeee";
+static char selfgcolor[] = FG;
 static char selbgcolor[] = YELLOW;
 static char selbordercolor[] = YELLOW;
 static char selfloatcolor[] = YELLOW;
 
 static char titlenormfgcolor[] = GRAY;
-static char titlenormbgcolor[] = "#222222";
-static char titlenormbordercolor[] = "#444444";
+static char titlenormbgcolor[] = BG_DARK;
+static char titlenormbordercolor[] = GRAY;
 static char titlenormfloatcolor[] = PURPLE;
 
 static char titleselfgcolor[] = FG;
@@ -55,22 +55,22 @@ static char titleselbordercolor[] = BLUE;
 static char titleselfloatcolor[] = BLUE;
 
 static char tagsnormfgcolor[] = GRAY;
-static char tagsnormbgcolor[] = "#222222";
-static char tagsnormbordercolor[] = "#444444";
+static char tagsnormbgcolor[] = BG_DARK;
+static char tagsnormbordercolor[] = GRAY;
 static char tagsnormfloatcolor[] = PURPLE;
 
-static char tagsselfgcolor[] = FG;
-static char tagsselbgcolor[] = BLUE;
+static char tagsselfgcolor[] = YELLOW;
+static char tagsselbgcolor[] = BG_DARK;
 static char tagsselbordercolor[] = BLUE;
 static char tagsselfloatcolor[] = BLUE;
 
 static char hidfgcolor[] = BLUE;
-static char hidbgcolor[] = "#222222";
+static char hidbgcolor[] = BG_DARK;
 static char hidbordercolor[] = BLUE;
 static char hidfloatcolor[] = ORANGE;
 
 static char urgfgcolor[] = GRAY;
-static char urgbgcolor[] = "#222222";
+static char urgbgcolor[] = BG_DARK;
 static char urgbordercolor[] = RED;
 static char urgfloatcolor[] = PURPLE;
 
@@ -114,11 +114,12 @@ static const unsigned int ulinevoffset =
 
 /* --------------- tags -------------- */
 static char *tagicons[][NUMTAGS] = {
-    [DEFAULT_TAGS] = {"", "", "", "", "", "", ""},
+    [DEFAULT_TAGS] = {"", "", "", "", "", "", "", ""},
+    [ALT_TAGS_DECORATION] = {"", "", "", "", "", "", "", ""},
 };
 
 /* ---------------  -------------- */
-static int tagindicatortype = INDICATOR_TOP_LEFT_SQUARE;
+static int tagindicatortype = INDICATOR_BOTTOM_BAR;
 static int tiledindicatortype = INDICATOR_NONE;
 static int floatindicatortype = INDICATOR_TOP_LEFT_SQUARE;
 static int fakefsindicatortype = INDICATOR_PLUS;
@@ -290,7 +291,7 @@ static Key keys[] = {
     {Mod1Mask, XK_Tab, shiftviewclients, {.i = +1}},
     {Mod1Mask | ShiftMask, XK_Tab, shiftviewclients, {.i = -1}},
     /*{MODKEY, XK_r, reorganizetags, {0}},*/
-    {MODKEY | ShiftMask, XK_r, distributetags, {0}},
+    /*{MODKEY | ShiftMask, XK_r, distributetags, {0}},*/
 
     /* --------- scratchpad -------- */
     /*{MODKEY, XK_n, setscratch, {.v = scratchpadcmd}},*/
@@ -345,7 +346,7 @@ static Button buttons[] = {
      * if you want to control these separately (i.e. to retain the feature to
      * move a tiled window into a floating position).
      */
-    {ClkClientWin, MODKEY, Button1, moveorplace, {.i = 2}},
+    //{ClkClientWin, MODKEY, Button1, moveorplace, {.i = 2}},
     {ClkClientWin, MODKEY, Button2, togglefloating, {0}},
     {ClkClientWin, MODKEY, Button3, resizemouse, {0}},
     {ClkClientWin, MODKEY | ShiftMask, Button3, dragcfact, {0}},
