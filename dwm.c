@@ -4343,7 +4343,14 @@ updatebarpos(Monitor *m)
 	m->ww = m->mw;
 	m->wh = m->mh;
 	Bar *bar;
-	#if BAR_PADDING_PATCH
+	#if BAR_GAPS_PADDING_PATCH
+	int y_pad = 0;
+	int x_pad = 0;
+	if (enablegaps) {
+		y_pad = gappov;
+		x_pad = gappoh;
+	}
+	#elif BAR_PADDING_PATCH
 	int y_pad = vertpad;
 	int x_pad = sidepad;
 	#else
