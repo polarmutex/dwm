@@ -14,6 +14,10 @@
           src = builtins.path { path = ./.; name = "dwm"; };
         });
       };
+
+      pkgs = import nixpkgs {
+        inherit system;
+      };
     in
     {
       inherit overlay;
@@ -24,5 +28,9 @@
           overlays = [ overlay ];
         }
       ).dwm;
+
+      devShell.x86_64-linux = pkgs.mkShell {
+        buildInputs = with pkgs; [ xorg.libX11 xorg.libXft xorg.libXinerama gcc ];
+      };
     };
 }
