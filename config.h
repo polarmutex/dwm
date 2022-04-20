@@ -1,11 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* --------------- settings -------------- */
-static const char *fonts[] = {
-    "MonoLisa:style=medium:size=10",
-    "FiraCode Nerd Font Mono:style=Retina,Regularsize=10"};
-static const char dmenufont[] =
-    "Fira Code Regular Nerd Font Complete Mono:size=10";
+static const char *fonts[] = {"MonoLisa Nerd Font:style=medium:size=10"};
+static const char dmenufont[] = "MonoLisa Nerd Font:size=10";
 static unsigned int borderpx = 2; /* border pixel of windows */
 static unsigned int snap = 10;    /* snap pixel */
 static int swallowfloating =
